@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NullOrderBy
+namespace OrderByNullsLast
 {
     public static class EnumerableExtensions
     {

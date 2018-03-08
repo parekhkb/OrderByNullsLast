@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NullOrderBy
+namespace OrderByNullsLast
 {
     internal class NullsComparer<T> : IComparer<T?> where T : struct
     {

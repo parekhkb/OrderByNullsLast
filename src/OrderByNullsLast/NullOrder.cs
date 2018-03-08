@@ -1,4 +1,4 @@
-﻿namespace NullOrderBy
+﻿namespace OrderByNullsLast
 {
     public enum NullOrder
     {
