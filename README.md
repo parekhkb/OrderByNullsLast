@@ -21,7 +21,7 @@ public class Element
     }
 
     public double? StructValue { get; }
-    publci string ClassValue { get; }
+    public string ClassValue { get; }
 }
 
 var list = new List<Element>
