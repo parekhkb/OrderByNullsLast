@@ -13,6 +13,10 @@
     <PackageLicenseUrl>https://github.com/parekhkb/OrderByNullsLast/blob/master/LICENSE</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageTags>IEnumerable, OrderBy, Order, OrderByDescending, OrderByNullsLast, OrderByNullsFirst, OrderByDescendingNullsLast, OrderByDescendingNullsFirst, Nulls First, Nulls Last</PackageTags>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <PackageReleaseNotes>Added support for key selectors that produce objects whose types are classes rather than just nullable structs.</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
