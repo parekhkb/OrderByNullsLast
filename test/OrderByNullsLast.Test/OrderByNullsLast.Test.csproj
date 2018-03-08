@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\OrderByNullsLast\OrderByNullsLast.csproj" />
+    <ProjectReference Include="..\..\src\OrderByNullsLast\OrderByNullsLast.csproj" />
   </ItemGroup>
 
 </Project>
