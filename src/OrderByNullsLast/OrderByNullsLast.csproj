@@ -3,7 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Simple C# library to specify whether to place nulls first or last when ordering a enumerable of nullable types.</Description>
+    <Description>Simple C# library to specify whether to place nulls first or last when ordering an enumerable by a key selector with nullable types.
+</Description>
     <Authors>Kayton Parekh</Authors>
     <Company />
     <Product />
