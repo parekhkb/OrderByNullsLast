@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Simple C# library to specify whether to place nulls first or last when ordering a enumerable of nullable types.</Description>
+    <Authors>Kayton Parekh</Authors>
+    <Company />
+    <Product />
+    <PackageProjectUrl>https://github.com/parekhkb/OrderByNullsLast</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/parekhkb/OrderByNullsLast</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/parekhkb/OrderByNullsLast/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTags>IEnumerable, OrderBy, Order, OrderByDescending, OrderByNullsLast, OrderByNullsFirst, OrderByDescendingNullsLast, OrderByDescendingNullsFirst, Nulls First, Nulls Last</PackageTags>
   </PropertyGroup>
 
 </Project>
