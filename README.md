@@ -14,25 +14,34 @@ using System.Linq;
 
 public class Element
 {
-    public Element(double? val)
+    public Element(double? structVal, string classVal)
     {
-        Value = val;
+        StructValue = structVal;
+        ClassValue = classVal;
     }
 
-    public double? Value { get; }
+    public double? StructValue { get; }
+    publci string ClassValue { get; }
 }
 
 var list = new List<Element>
 {
-    new Element(3),
-    new Element(null),
-    new Element(1),
-    new Element(2),
-    new Element(null)
+    new Element(3, "3"),
+    new Element(null, null),
+    new Element(1, "1"),
+    new Element(2, "2"),
+    new Element(null, null)
 };
 
-list.OrderBy(x=>x.Value, NullOrder.First) // null, null, 1, 2, 3
-list.OrderBy(x=>x.Value, NullOrder.Last) // 1, 2, 3, null, null
-list.OrderByDescending(x=>x.Value, NullOrder.First) // null, null, 3, 2, 1
-list.OrderByDescending(x=>x.Value, NullOrder.Last) // 3, 2, 1, null, null
+// Select key type is a nullable struct
+list.OrderBy(x => x.StructValue, NullOrder.First) // null, null, 1, 2, 3
+list.OrderBy(x => x.StructValue, NullOrder.Last) // 1, 2, 3, null, null
+list.OrderByDescending(x => x.StructValue, NullOrder.First) // null, null, 3, 2, 1
+list.OrderByDescending(x => x.StructValue, NullOrder.Last) // 3, 2, 1, null, null
+
+// Select key type is a class
+list.OrderBy(x => x.ClassValue, NullOrder.First) // null, null, "1", "2", "3"
+list.OrderBy(x => x.ClassValue, NullOrder.Last) // "1", "2", "3", null, null
+list.OrderByDescending(x => x.ClassValue, NullOrder.First) // null, null, "3", "2", "1"
+list.OrderByDescending(x => x.ClassValue, NullOrder.Last) // "3", "2", "1", null, null
 ```

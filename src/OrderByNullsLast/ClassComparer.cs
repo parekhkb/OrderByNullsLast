@@ -2,19 +2,19 @@
 
 namespace OrderByNullsLast
 {
-    internal class NullsComparer<T> : IComparer<T?> where T : struct
+    internal class ClassComparer<T> : IComparer<T> where T : class
     {
-        public static NullsComparer<T> Larger => new NullsComparer<T>(true);
-        public static NullsComparer<T> Smaller => new NullsComparer<T>(false);
+        public static ClassComparer<T> Larger => new ClassComparer<T>(true);
+        public static ClassComparer<T> Smaller => new ClassComparer<T>(false);
 
         private readonly bool _isLarger;
 
-        private NullsComparer(bool isLarger)
+        private ClassComparer(bool isLarger)
         {
             _isLarger = isLarger;
         }
 
-        public int Compare(T? x, T? y)
+        public int Compare(T x, T y)
         {
             if (x == null && y == null)
             {
@@ -31,7 +31,7 @@ namespace OrderByNullsLast
                 return _isLarger ? -1 : 1;
             }
 
-            return Comparer<T>.Default.Compare(x.Value, y.Value);
+            return Comparer<T>.Default.Compare(x, y);
         }
     }
 }

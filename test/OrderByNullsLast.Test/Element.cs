@@ -2,11 +2,17 @@ namespace OrderByNullsLast.Test
 {
     public class Element
     {
-        public Element(double? val)
+        public Element(double? structVal)
         {
-            Value = val;
+            StructValue = structVal;
+        }
+        public Element(string stringVal)
+        {
+            ClassValue = stringVal;
         }
 
-        public double? Value { get; }
+        public double? StructValue { get; }
+
+        public string ClassValue { get; }
     }
 }
