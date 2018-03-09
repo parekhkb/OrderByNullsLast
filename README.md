@@ -11,6 +11,7 @@ The default behavior of System.Linq.OrderBy would always place null values first
 
 ```c#
 using System.Linq;
+using OrderByNullsLast;
 
 public class Element
 {
@@ -34,14 +35,14 @@ var list = new List<Element>
 };
 
 // Selector key type is a nullable struct
-list.OrderBy(x => x.StructValue, NullOrder.NullsFirst) // null, null, 1, 2, 3
-list.OrderBy(x => x.StructValue, NullOrder.NullsLast) // 1, 2, 3, null, null
-list.OrderByDescending(x => x.StructValue, NullOrder.NullsFirst) // null, null, 3, 2, 1
-list.OrderByDescending(x => x.StructValue, NullOrder.NullsLast) // 3, 2, 1, null, null
+list.OrderBy(x => x.StructValue, NullOrder.NullsFirst); // null, null, 1, 2, 3
+list.OrderBy(x => x.StructValue, NullOrder.NullsLast); // 1, 2, 3, null, null
+list.OrderByDescending(x => x.StructValue, NullOrder.NullsFirst); // null, null, 3, 2, 1
+list.OrderByDescending(x => x.StructValue, NullOrder.NullsLast); // 3, 2, 1, null, null
 
 // Selector key type is a class
-list.OrderBy(x => x.ClassValue, NullOrder.NullsFirst) // null, null, "1", "2", "3"
-list.OrderBy(x => x.ClassValue, NullOrder.NullsLast) // "1", "2", "3", null, null
-list.OrderByDescending(x => x.ClassValue, NullOrder.NullsFirst) // null, null, "3", "2", "1"
-list.OrderByDescending(x => x.ClassValue, NullOrder.NullsLast) // "3", "2", "1", null, null
+list.OrderBy(x => x.ClassValue, NullOrder.NullsFirst); // null, null, "1", "2", "3"
+list.OrderBy(x => x.ClassValue, NullOrder.NullsLast); // "1", "2", "3", null, null
+list.OrderByDescending(x => x.ClassValue, NullOrder.NullsFirst); // null, null, "3", "2", "1"
+list.OrderByDescending(x => x.ClassValue, NullOrder.NullsLast); // "3", "2", "1", null, null
 ```
